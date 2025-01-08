@@ -1,7 +1,25 @@
+// import { bootstrapApplication } from '@angular/platform-browser';
+
+// import { config } from './app/app.config.server';//
 import { bootstrapApplication } from '@angular/platform-browser';
-import { AppComponent } from './app/app.component';
+import { provideServerRendering } from '@angular/platform-server';
 import { config } from './app/app.config.server';
 
-const bootstrap = () => bootstrapApplication(AppComponent, config);
+import { AppComponent } from './app/app.component'; // Ensure this is your root component
 
-export default bootstrap;
+// Bootstrap the application with server-side rendering
+export default function bootstrap() {
+  return bootstrapApplication(AppComponent, {
+    providers: [
+      provideServerRendering(),
+      ...config.providers // Ensure your app's config is properly imported
+    ],
+  });
+}
+
+
+
+
+
+
+
