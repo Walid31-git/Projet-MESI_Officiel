@@ -24,4 +24,14 @@ export class VoitureService {
   }
 }
 
+export class VenteService {
+  private apiUrl = 'http://localhost:9001/voiture/add'; // Remplacez par votre URL d'API backend
+
+  constructor(private http: HttpClient) {}
+
+  ajouterVoiture(voitureData: any): Observable<any> {
+    return this.http.post(this.apiUrl, voitureData);
+  }
+}
+
 
