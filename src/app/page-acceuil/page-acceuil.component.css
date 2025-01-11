@@ -197,4 +197,13 @@ section {
   .voiture-list h2 {
     margin: 20px;
   }
+
+  .voiture-list h1{
+    width: 100%;
+    position: relative;
+    
+    margin: 30px 100px;
+    align-items: center;
+    justify-content: center;
+  }
   
