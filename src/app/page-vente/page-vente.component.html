@@ -1,5 +1,5 @@
 <section id="slogan">
-    <img src="assets/images/voiture2.png" id="audiImage" alt="Audi-Grise" width="500">
+    <img src="assets/images/voiture2.png" id="audiImage" alt="Audi Grise" width="500">
     <div id="audi">
         <h1>AUDI</h1>
     </div>
@@ -9,27 +9,27 @@
 </section>
 <section id="ajout_voiture">
     <h1>Commençons par l'essentiel</h1>
-    
     <form id="form_voiture" enctype="multipart/form-data">
-        <label for="marque">Marque:</label>
+        <label for="marque">Marque :</label>
         <input type="text" id="marque" name="marque" required>
 
-        <label for="modele">Modèle:</label>
+        <label for="modele">Modèle :</label>
         <input type="text" id="modele" name="modele" required>
 
-        <label for="annee">Année:</label>
+        <label for="annee">Année :</label>
         <input type="number" id="annee" name="annee" min="1950" max="2025" required>
-        <span *ngIf="errorMessage" style="color: red;">L'année ne peut pas dépasser 2025.</span>
-        <label for="prix">Prix:</label>
+        <span class="error-message" *ngIf="errorMessage">L'année ne peut pas dépasser 2025.</span>
+
+        <label for="prix">Prix :</label>
         <input type="number" id="prix" name="prix" required>
 
-        <label for="couleur">Couleur:</label>
+        <label for="couleur">Couleur :</label>
         <input type="text" id="couleur" name="couleur" required>
 
-        <label for="kilometrage">Kilométrage:</label>
+        <label for="kilometrage">Kilométrage :</label>
         <input type="number" id="kilometrage" name="kilometrage" required>
 
-        <label for="carburant">Type de Carburant:</label>
+        <label for="carburant">Type de Carburant :</label>
         <select id="carburant" name="carburant">
             <option value="essence">Essence</option>
             <option value="diesel">Diesel</option>
@@ -37,20 +37,14 @@
             <option value="electrique">Électrique</option>
         </select>
 
-        <label for="transmission">Transmission:</label>
+        <label for="transmission">Transmission :</label>
         <select id="transmission" name="transmission">
             <option value="manuelle">Manuelle</option>
             <option value="automatique">Automatique</option>
         </select>
 
-        <label for="description">Description:</label>
+        <label for="description">Description :</label>
         <textarea id="description" name="description" rows="4" placeholder="Ajoutez une description de la voiture"></textarea>
-
-         <!-- <label for="image1">Image 1 - Extérieur de la voiture:</label>
-        <input type="file" id="image1" name="image1" accept="image/*" required>
-
-        <label for="image2">Image 2 - Intérieur de la voiture:</label>
-        <input type="file" id="image2" name="image2" accept="image/*" required> -->
 
         <button type="submit">Ajouter la voiture</button>
     </form>

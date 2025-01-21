@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common'; // Importation du CommonModule
 import { VenteService } from '../voiture.service'; // Importez le service
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
+
 @Component({
   selector: 'app-page-vente',
   standalone: true,
@@ -43,12 +44,10 @@ export class PageVenteComponent {
 
   submitForm(): void {
     if (this.voitureForm.valid) {
-      const formData = new FormData();
-      Object.keys(this.voitureForm.controls).forEach((key) => {
-        formData.append(key, this.voitureForm.get(key)?.value);
-      });
-
-      this.venteService.ajouterVoiture(formData).subscribe({
+      // Récupérez les données du formulaire en tant qu'objet JSON
+      const voitureData = this.voitureForm.value;
+  
+      this.venteService.ajouterVoiture(voitureData).subscribe({
         next: (response) => {
           console.log('Voiture ajoutée avec succès !', response);
           alert('Voiture ajoutée avec succès !');
@@ -63,4 +62,5 @@ export class PageVenteComponent {
       alert('Veuillez remplir tous les champs obligatoires.');
     }
   }
+  
 }

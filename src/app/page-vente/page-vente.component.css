@@ -1,97 +1,84 @@
-#slogan {
-    background-color: #d3d3d3;
-    margin-left: 0%;
-    padding-top: 130px;
-}
-#audiImage {
-    position: absolute;
-    top: 180px;
-    margin: 0 500px;
-    z-index: 1;
-}
-#audi {
-    z-index: 0;
-    color: #ababab;
-    font-size: 100px;
-    position: absolute;
-    top: 0;
-    left: 23%;
-}
-#title_find {
-    position: absolute;
+/* Styles généraux */
+body {
     font-family: 'Verdana', sans-serif;
-    color: #9A011F;
-    left: 800px;
-    margin-top: -6%;
-    font-size: 50px;
-    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5);
-}
-
-#title_find_2 {
-    position: absolute;
-    font-family: 'Verdana', sans-serif;
-    color: black;
-    margin-top: -30px;
-    left: 950px;
-    font-size: 40px;
-    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.7);
-}
-#title_find_3 {
-    position: relative;
-    font-family: 'Verdana', sans-serif;
-    color: black;
-    top: 5px;
-    right: -1000px;
-    font-size: 40px;
-    padding-bottom: 5%;
-    text-shadow: 0px 5px 5px rgba(0, 0, 0, 0.7);
-}
-
-#ajout_voiture {
-    max-width: 600px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: 0;
     background-color: #f4f4f4;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-#ajout_voiture h1 {
+/* Section Slogan */
+.slogan {
+    background-color: #d3d3d3;
+    padding: 50px 10%;
     text-align: center;
+    position: relative;
+}
+
+.audiImage {
+    max-width: 100%;
+    height: auto;
+}
+
+.audi {
+    font-size: 3em;
+    color: #ababab;
+}
+
+h2 {
+    margin: 10px 0;
+    font-size: 2em;
     color: #333;
 }
 
-#form_voiture {
-    display: flex;
-    flex-direction: column;
+/* Formulaire Ajout Voiture */
+.ajout_voiture {
+    background: #fff;
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
-#form_voiture label {
-    margin-top: 10px;
+.form_voiture label {
+    display: block;
+    margin-bottom: 5px;
     font-weight: bold;
-    color: #555;
 }
 
-#form_voiture input, 
-#form_voiture select, 
-#form_voiture textarea {
+.form_voiture input,
+.form_voiture select,
+.form_voiture textarea {
+    width: 100%;
     padding: 8px;
-    margin-top: 5px;
-    border-radius: 4px;
+    margin-bottom: 15px;
     border: 1px solid #ccc;
+    border-radius: 4px;
 }
 
-#form_voiture button {
-    margin-top: 15px;
-    padding: 10px;
-    background-color: #9A011F;
+.form_voiture button {
+    background: #9A011F;
     color: #fff;
+    padding: 10px;
     border: none;
-    border-radius: 4px;
     cursor: pointer;
     font-size: 16px;
 }
 
-#form_voiture button:hover {
-    background-color: #7a0017;
+.form_voiture button:hover {
+    background: #7a0017;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .slogan {
+        padding: 20px 5%;
+    }
+
+    .ajout_voiture {
+        width: 90%;
+    }
+
+    h2 {
+        font-size: 1.5em;
+    }
 }

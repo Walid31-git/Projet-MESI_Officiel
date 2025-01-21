@@ -20,7 +20,7 @@ export class PageAcceuilComponent implements OnInit {
   }
 
   getVoitures(): void {
-    this.http.get<Voiture[]>('http://localhost:9001/voiture/all').subscribe(
+    this.http.get<Voiture[]>('http://localhost:9002/voiture/all').subscribe(
       (response) => {
         console.log(response);
         this.voitures = response; // Stockage des données dans le tableau voitures

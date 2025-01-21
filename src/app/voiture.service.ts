@@ -5,7 +5,7 @@ import { Voiture } from './voiture';
 
 @Injectable({providedIn: 'root'})
 export class VoitureService {
-  private apiUrl = 'http://localhost:9001/voiture/all'; // Replace with your backend URL if different
+  private apiUrl = 'http://localhost:9002/voiture'; // Replace with your backend URL if different
 
   constructor(private http: HttpClient) {}
 
@@ -23,7 +23,7 @@ export class VoitureService {
     return this.http.delete<void>(`${this.apiUrl}/delete/${voitureId}`);
   }
 }
-
+@Injectable({ providedIn: 'root' })
 export class VenteService {
   private apiUrl = 'http://localhost:9001/voiture/add'; // Remplacez par votre URL d'API backend
 
